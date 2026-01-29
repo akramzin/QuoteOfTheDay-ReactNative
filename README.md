@@ -1,97 +1,147 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# 📱 Quote of the Day - React Native App
 
-# Getting Started
+A minimalist quote application built with React Native featuring a Gen Z aesthetic with dark mode and neon green accents.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+## ✨ Features
 
-## Step 1: Start Metro
+- 🎲 **Random Quotes** - Get inspiring quotes with smooth fade animations
+- ❤️ **Favorites** - Save your favorite quotes locally
+- 📂 **Favorites Management** - View and manage all saved quotes
+- 💾 **Persistent Storage** - Uses AsyncStorage for local data persistence
+- 🎨 **Gen Z Minimalist UI** - Clean black background with neon green accents
+- 🏷️ **Category Tags** - Each quote is tagged with its category
+- ✨ **Smooth Animations** - Elegant fade-in effects on quote changes
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+## 📸 Screenshots
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+### Main Screen
+<img src="screenshots/screenshot-main.png" width="300">
 
-```sh
-# Using npm
-npm start
+### Favorite a Quote
+<img src="screenshots/screenshot-favorite-click.png" width="300">
 
-# OR using Yarn
-yarn start
+### Favorites List
+<img src="screenshots/screenshot-favorite-list.png" width="300">
+
+### Remove from Favorites
+<img src="screenshots/screenshot-favorite-remove.png" width="300">
+
+## 🛠️ Tech Stack
+
+- **React Native** (without Expo)
+- **TypeScript**
+- **AsyncStorage** - Local data persistence
+- **React Hooks** - State management
+- **Animated API** - Smooth transitions
+
+## 📦 Installation
+
+### Prerequisites
+- Node.js
+- React Native CLI
+- Xcode (for iOS)
+- CocoaPods
+
+### Setup
+
+1. Clone the repository:
+```bash
+git clone https://github.com/akramzin/QuoteOfTheDay-ReactNative.git
+cd QuoteOfTheDay-ReactNative
 ```
 
-## Step 2: Build and run your app
-
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
-
-### Android
-
-```sh
-# Using npm
-npm run android
-
-# OR using Yarn
-yarn android
+2. Install dependencies:
+```bash
+npm install
 ```
 
-### iOS
-
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
+3. Install iOS dependencies:
+```bash
+cd ios
+pod install
+cd ..
 ```
 
-Then, and every time you update your native dependencies, run:
+4. Run the app:
 
-```sh
-bundle exec pod install
-```
-
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
+**iOS:**
+```bash
 npm run ios
-
-# OR using Yarn
-yarn ios
 ```
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+**Android:**
+```bash
+npm run android
+```
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+## 📁 Project Structure
+```
+QuoteOfTheDay/
+├── src/
+│   ├── screens/
+│   │   ├── QuoteScreen.tsx      # Main quote display screen
+│   │   └── FavoritesScreen.tsx  # Favorites list screen
+│   ├── services/
+│   │   ├── quoteService.ts      # API service (placeholder)
+│   │   └── storageService.ts    # AsyncStorage operations
+│   ├── utils/
+│   │   └── quotesData.ts        # Local quotes database
+│   └── components/              # Reusable components (future)
+├── App.tsx                       # Main app component with navigation
+└── README.md
+```
 
-## Step 3: Modify your app
+## 🎨 Design Philosophy
 
-Now that you have successfully run the app, let's make changes!
+This app follows a **Gen Z minimalist aesthetic**:
+- **Color Palette**: Pure black (#0a0a0a) with neon green (#00ff88) accents
+- **Typography**: Clean, modern fonts with varied weights
+- **Layout**: Generous whitespace, sharp edges (no rounded corners)
+- **Animations**: Subtle fade-ins for a polished feel
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+## 🚀 Features Breakdown
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+### Quote Display
+- Displays random quotes from a curated database
+- Shows author name with decorative line
+- Category badge for each quote
+- Smooth fade-in animation on load
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+### Favorites System
+- Heart button to save/unsave quotes
+- Persistent storage using AsyncStorage
+- Visual feedback with alerts
+- Dedicated favorites screen
 
-## Congratulations! :tada:
+### Navigation
+- Simple state-based navigation between screens
+- Back button on favorites screen
+- Clean transitions
 
-You've successfully run and modified your React Native App. :partying_face:
+## 📝 Future Enhancements
 
-### Now what?
+- [ ] Share quotes to social media
+- [ ] Daily notification with quote
+- [ ] Search quotes by author or category
+- [ ] Filter favorites by category
+- [ ] Dark/Light theme toggle
+- [ ] Add more quotes to database
+- [ ] Widget for home screen
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
+## 👨‍💻 Author
 
-# Troubleshooting
+**Akramzin**
+- GitHub: [@akramzin](https://github.com/akramzin)
 
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+## 📄 License
 
-# Learn More
+This project is open source and available under the MIT License.
 
-To learn more about React Native, take a look at the following resources:
+## 🙏 Acknowledgments
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+- Quotes sourced from various inspirational authors
+- Built as a learning project for React Native
+
+---
+
+Made with ❤️ and React Native
