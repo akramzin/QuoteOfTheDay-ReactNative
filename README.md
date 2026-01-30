@@ -118,16 +118,6 @@ This app follows a **Gen Z minimalist aesthetic**:
 - Back button on favorites screen
 - Clean transitions
 
-## 📝 Future Enhancements
-
-- [ ] Share quotes to social media
-- [ ] Daily notification with quote
-- [ ] Search quotes by author or category
-- [ ] Filter favorites by category
-- [ ] Dark/Light theme toggle
-- [ ] Add more quotes to database
-- [ ] Widget for home screen
-
 ## 👨‍💻 Author
 
 **Akramzin**
@@ -141,7 +131,3 @@ This project is open source and available under the MIT License.
 
 - Quotes sourced from various inspirational authors
 - Built as a learning project for React Native
-
----
-
-Made with ❤️ and React Native
